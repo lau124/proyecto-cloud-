@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personajes de Rick and Morty</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="https://rickandmortyapi.com/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="loading-screen" id="loading-screen">
+        <div class="portal-loader">
+            <div class="portal"></div>
+        </div>
+        <p>Cargando...</p>
+    </div>
+
+    <nav class="navbar">
+        <div class="logo">
+            <img src="https://rickandmortyapi.com/api/character/avatar/1.jpeg" alt="Rick and Morty Logo">
+            <span>Rick and Morty</span>
+        </div>
+        <div class="menu-toggle" id="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="personajes.html" class="active">Personajes</a></li>
+            <li><a href="episodios.html">Episodios</a></li>
+            <li><a href="ubicaciones.html">Ubicaciones</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Personajes de Rick and Morty</h1>
+            <p>Explora todos los personajes del multiverso de Rick and Morty</p>
+        </div>
+    </header>
+
+    <main>
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="Buscar personaje...">
+            <button id="search-btn"><i class="fas fa-search"></i></button>
+        </div>
+
+        <div class="filters">
+            <button class="filter-btn active" data-filter="all">Todos</button>
+            <button class="filter-btn" data-filter="Human">Humano</button>
+            <button class="filter-btn" data-filter="Alien">Alien</button>
+            <button class="filter-btn" data-filter="alive">Vivo</button>
+            <button class="filter-btn" data-filter="dead">Muerto</button>
+        </div>
+
+        <div class="characters-container" id="characters-container">
+            <!-- Los personajes se cargarán aquí dinámicamente -->
+        </div>
+
+        <div class="error-message" id="error-message">
+            <i class="fas fa-exclamation-triangle"></i>
+            <p>No se pudieron cargar los datos. La API podría estar temporalmente inactiva.</p>
+            <button id="retry-btn">Reintentar</button>
+        </div>
+
+        <div class="pagination">
+            <button id="prev-page" disabled><i class="fas fa-chevron-left"></i> Anterior</button>
+            <span id="page-info">Página 1 de 1</span>
+            <button id="next-page">Siguiente <i class="fas fa-chevron-right"></i></button>
+        </div>
+    </main>
+
+    <div class="character-modal" id="character-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-body" id="modal-body">
+                <!-- Detalles del personaje -->
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="https://rickandmortyapi.com/api/character/avatar/1.jpeg" alt="Rick and Morty Logo">
+                <span>Rick and Morty</span>
+            </div>
+            <div class="footer-links">
+                <h3>Enlaces Rápidos</h3>
+                <ul>
+                    <li><a href="personajes.html">Personajes</a></li>
+                    <li><a href="episodios.html">Episodios</a></li>
+                    <li><a href="ubicaciones.html">Ubicaciones</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h3>Síguenos</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Rick and Morty Fan Site. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="personajes.js"></script>
+</body>
+</html>
